@@ -4,7 +4,7 @@ version: 1.0.0
 appVersion: 0.34.1
 description: This is my Falco helm chart!
 type: application 
-dependencies:
-  - name: falco
-    version: 3.1.0
-    repository: https://falcosecurity.github.io/charts
+# dependencies:
+#   - name: falco
+#     version: 3.1.0
+#     repository: https://falcosecurity.github.io/charts
