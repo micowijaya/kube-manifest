@@ -5,7 +5,6 @@ appVersion: 0.34.1
 description: This is my Falco helm chart!
 type: application 
 dependencies:
-  - name: falcosidekick
-    version: "0.5.16"
-    condition: falcosidekick.enabled
+  - name: falco
+    version: 3.1.0
     repository: https://falcosecurity.github.io/charts
