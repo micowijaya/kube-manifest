@@ -8,8 +8,8 @@
 
 image:
   # -- The image pull policy.
-#   pullPolicy: IfNotPresent
-  pullPolicy: true
+  pullPolicy: IfNotPresent
+ 
   # -- The image registry to pull from.
   registry: docker.io
   # -- The image repository to pull from
@@ -200,8 +200,7 @@ driver:
     initContainer:
       image:
         # -- The image pull policy.
-#         pullPolicy: IfNotPresent
-        pullPolicy: true
+        pullPolicy: IfNotPresent
         # -- The image registry to pull from.
         registry: docker.io
         # -- The image repository to pull from.
