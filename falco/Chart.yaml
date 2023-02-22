@@ -1,9 +1,11 @@
 apiVersion: v2
 name: falcosecurity-falco
 version: 1.0.0
+appVersion: 0.34.1
 description: This is my Falco helm chart!
 type: application 
 dependencies:
-- name: falco
-  version: 0.34.1
-  repository: https://falcosecurity.github.io/charts
+  - name: falcosidekick
+    version: "0.5.16"
+    condition: falcosidekick.enabled
+    repository: https://falcosecurity.github.io/charts
