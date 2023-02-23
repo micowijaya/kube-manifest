@@ -348,7 +348,7 @@ falco:
       # -- if true, checkcert flag will be ignored (server cert will always be checked)
       mutualtls: true
       # -- check if ssl certificate of the output is valid
-      checkcert: true
+      checkcert: false
       # -- minimum priority of event to use this output, order is `emergency\|alert\|critical\|error\|warning\|notice\|informational\|debug or ""`
       minimumpriority: ""
 
