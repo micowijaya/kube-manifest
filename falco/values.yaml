@@ -346,7 +346,7 @@ falco:
       # -- use this password to authenticate to Elasticsearch if the password is not empty
       password: "verihubs"
       # -- if true, checkcert flag will be ignored (server cert will always be checked)
-      mutualtls: false
+      mutualtls: true
       # -- check if ssl certificate of the output is valid
       checkcert: true
       # -- minimum priority of event to use this output, order is `emergency\|alert\|critical\|error\|warning\|notice\|informational\|debug or ""`
