@@ -334,7 +334,7 @@ falco:
     
     loki:
       # -- Loki <http://host:port>, if not `empty`, Loki is *enabled*
-      hostport: ""
+      hostport: "http://loki.grafana-loki.svc.cluster.local:3100"
       # -- user for Grafana Logs
       user: ""
       # -- API Key for Grafana Logs
