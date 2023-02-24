@@ -332,25 +332,25 @@ falco:
     # -- Check SSL Cert
     checkcert: false
     
-    elasticsearch:
-      # -- Elasticsearch <http://host:port>, if not `empty`, Elasticsearch is *enabled*
-      hostport: "https://elasticsearch-master.elastic.svc.cluster.local:9200"
-      # -- Elasticsearch index
-      index: "falco"
-      # -- Elasticsearch document type
-      type: "_doc"
-      # date suffix for index rotation : daily, monthly, annually, none
-      suffix: "daily"
-      # -- use this username to authenticate to Elasticsearch if the username is not empty
-      username: "admin"
-      # -- use this password to authenticate to Elasticsearch if the password is not empty
-      password: "verihubs"
+    loki:
+      # -- Loki <http://host:port>, if not `empty`, Loki is *enabled*
+      hostport: ""
+      # -- user for Grafana Logs
+      user: ""
+      # -- API Key for Grafana Logs
+      apikey: ""
+      # -- Loki endpoint URL path, more info: <https://grafana.com/docs/loki/latest/api/#post-apiprompush>
+      endpoint: "/loki/api/v1/push"
+      # -- Loki tenant, if not `empty`, Loki tenant is *enabled*
+      tenant: ""
+      # -- comma separated list of fields to use as labels additionally to rule, source, priority, tags and custom_fields
+      extralabels: ""
+      # -- minimum priority of event to use this output, order is `emergency\|alert\|critical\|error\|warning\|notice\|informational\|debug or ""`
+      minimumpriority: ""
       # -- if true, checkcert flag will be ignored (server cert will always be checked)
       mutualtls: true
       # -- check if ssl certificate of the output is valid
       checkcert: false
-      # -- minimum priority of event to use this output, order is `emergency\|alert\|critical\|error\|warning\|notice\|informational\|debug or ""`
-      minimumpriority: ""
 
   ####################
   # falcoctl config  #
