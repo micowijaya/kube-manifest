@@ -1,0 +1,29 @@
+---
+traefik:
+  globalArguments:
+    - "--global.checknewversion"
+  rbac:
+    enabled: true
+  ports:
+    websecure:
+      tls:
+        enabled: true
+  podAnnotations:
+    prometheus.io/port: "9100"
+    prometheus.io/scrape: "true"
+  providers:
+    kubernetesIngress:
+      publishedService:
+        enabled: true
+  priorityClassName: "system-cluster-critical"
+  tolerations:
+    - key: "CriticalAddonsOnly"
+      operator: "Exists"
+    - key: "node-role.kubernetes.io/control-plane"
+      operator: "Exists"
+      effect: "NoSchedule"
+    - key: "node-role.kubernetes.io/master"
+      operator: "Exists"
+      effect: "NoSchedule"
+  service:
+    ipFamilyPolicy: "PreferDualStack"
